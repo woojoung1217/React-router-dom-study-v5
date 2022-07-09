@@ -5,11 +5,15 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import NotFound from "./pages/NotFound";
 import Links from "./components/Links";
+import NavLinks from "./components/NavLinks";
+import Login from "./pages/Login";
 function App() {
   return (
     <BrowserRouter>
       <Links/>
+      <NavLinks/>
       <Switch>
+        <Route path="/login" component={Login}></Route>
         <Route path="/profile/1" component={Profile}></Route>
         <Route path="/profile" component={Profile}></Route>
         <Route path="/about" component={About}></Route>
